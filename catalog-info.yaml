@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bo2gf8z3n-go-gitops
+  description: This is GitOps manifest for bo2gf8z3n-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: bo2gf8z3n-go
+    backstage.io/kubernetes-id: bo2gf8z3n-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: bo2gf8z3n-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:bo2gf8z3n-go
